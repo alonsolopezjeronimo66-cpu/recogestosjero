@@ -71,12 +71,12 @@ if img_file_buffer is not None:
       ret= client1.publish("casai", message)
     if prediction[0][1]>0.7:
       st.header('Registro de rostro con exito,Bienvenido David')
-        act1="David"
-        client1= paho.Client("casainteligentestreamlit")                           
-        client1.on_publish = on_publish                          
-        client1.connect(broker,port)  
-        message =json.dumps({"Act1":act1})
-        ret= client1.publish("casai", message)
+      act1="David"
+      client1= paho.Client("casainteligentestreamlit")                           
+      client1.on_publish = on_publish                          
+      client1.connect(broker,port)  
+      message =json.dumps({"Act1":act1})
+      ret= client1.publish("casai", message)
     #if prediction[0][2]>0.5:
     # st.header('Derecha, con Probabilidad: '+str( prediction[0][2]))
 
