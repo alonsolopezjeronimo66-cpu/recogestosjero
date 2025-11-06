@@ -41,9 +41,9 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.7:
-      st.header('Registro de rostro con exito,Bienvenido Jeronimo: '+str( prediction[0][0]))
+      st.header('Registro de rostro con exito,Bienvenido Jeronimo')
     if prediction[0][1]>0.7:
-      st.header('Registro de rostro con exito,Bienvenido David: '+str( prediction[0][1]))
+      st.header('Registro de rostro con exito,Bienvenido David')
     #if prediction[0][2]>0.5:
     # st.header('Derecha, con Probabilidad: '+str( prediction[0][2]))
 
