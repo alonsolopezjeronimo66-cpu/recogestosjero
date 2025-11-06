@@ -4,8 +4,12 @@ import numpy as np
 #from PIL import Image
 from PIL import Image as Image, ImageOps as ImagOps
 from keras.models import load_model
-
+import paho.mqtt.client as paho
+import time
+import json
 import platform
+
+
 
 # Muestra la versión de Python junto con detalles adicionales
 st.write("Versión de Python:", platform.python_version())
