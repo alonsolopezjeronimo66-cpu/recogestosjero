@@ -61,7 +61,7 @@ if img_file_buffer is not None:
     # run the inference
     prediction = model.predict(data)
     print(prediction)
-    if prediction[0][0]>0.7:
+    if prediction[0][0]>0.5:
       st.header('Registro de rostro con exito,Bienvenido Jeronimo')
       act1="Jero"
       client1= paho.Client("casainteligentestreamlit")                           
@@ -69,7 +69,7 @@ if img_file_buffer is not None:
       client1.connect(broker,port)  
       message =json.dumps({"Act1":act1})
       ret= client1.publish("casai", message)
-    if prediction[0][1]>0.7:
+    if prediction[0][1]>0.5:
       st.header('Registro de rostro con exito,Bienvenido David')
       act1="David"
       client1= paho.Client("casainteligentestreamlit")                           
