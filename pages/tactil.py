@@ -30,7 +30,8 @@ client1.on_message = on_message
 
 
 
-st.title("MQTT Control")
+st.title("Control de luces")
+st.write('Luces de la sala')
 
 if st.button('ON'):
     act1="ON"
@@ -55,7 +56,7 @@ if st.button('OFF'):
     ret= client1.publish("casai", message)
 
 
-if st.button('ONH'):
+if st.button('ON'):
     act1="ONH"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
@@ -69,7 +70,7 @@ if st.button('ONH'):
 else:
     st.write('')
 
-if st.button('OFFH'):
+if st.button('OFF'):
     act1="OFFH"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
