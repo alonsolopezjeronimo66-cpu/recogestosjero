@@ -53,6 +53,29 @@ if st.button('OFF'):
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("casai", message)
+
+
+if st.button('ONH'):
+    act1="ONH"
+    client1= paho.Client("casainteligentestreamlit")                           
+    client1.on_publish = on_publish                          
+    client1.connect(broker,port)  
+    message =json.dumps({"Act1":act1})
+    ret= client1.publish("casai", message)
+ 
+    #client1.subscribe("Sensores")
+    
+    
+else:
+    st.write('')
+
+if st.button('OFFH'):
+    act1="OFFH"
+    client1= paho.Client("casainteligentestreamlit")                           
+    client1.on_publish = on_publish                          
+    client1.connect(broker,port)  
+    message =json.dumps({"Act1":act1})
+    ret= client1.publish("casai", message)
   
     
 else:
