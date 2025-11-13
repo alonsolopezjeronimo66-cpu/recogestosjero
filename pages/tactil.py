@@ -33,7 +33,7 @@ client1.on_message = on_message
 st.title("Control de luces")
 st.write('Luces de la sala')
 
-if st.button('ON'):
+if st.button('ON', key="1"):
     act1="ON"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
@@ -47,7 +47,7 @@ if st.button('ON'):
 else:
     st.write('')
 
-if st.button('OFF'):
+if st.button('OFF', key="2"):
     act1="OFF"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
@@ -55,8 +55,8 @@ if st.button('OFF'):
     message =json.dumps({"Act1":act1})
     ret= client1.publish("casai", message)
 
-    st.write('Luces de la habitacion')
-if st.button('ON'):
+    st.write("Luces de la habitacion")
+if st.button('ON', key="3"):
     act1="ONH"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
@@ -70,7 +70,7 @@ if st.button('ON'):
 else:
     st.write('')
 
-if st.button('OFF'):
+if st.button('OFF', key="4"):
     act1="OFFH"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
