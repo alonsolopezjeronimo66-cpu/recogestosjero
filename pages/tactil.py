@@ -30,7 +30,7 @@ client1.on_message = on_message
 
 
 
-st.title("Control de luces")
+st.title("Control de luces casa inteligente")
 st.write('Luces de la sala')
 
 if st.button('ON', key="1"):
