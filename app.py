@@ -37,7 +37,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 st.title("Reconocimiento facial casa inteligente")
 st.write("Acercate a la camara para ser reconocido e ingresar a la casa")
 #st.write("Versión de Python:", platform.python_version())
-image = Image.open('abrazo.jpeg')
+image = Image.open('reconocimientofacial.jpeg')
 st.image(image, width=350)
 with st.sidebar:
     st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
