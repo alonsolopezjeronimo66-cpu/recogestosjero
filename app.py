@@ -35,7 +35,7 @@ model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 st.title("Reconocimiento facial casa inteligente")
-st.write("Acercate a la camara para ser reconcocio e ingresar a la casa")
+st.write("Acercate a la camara para ser reconocido e ingresar a la casa")
 #st.write("Versión de Python:", platform.python_version())
 image = Image.open('abrazo.jpeg')
 st.image(image, width=350)
