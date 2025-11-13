@@ -55,7 +55,7 @@ if st.button('OFF', key="2"):
     message =json.dumps({"Act1":act1})
     ret= client1.publish("casai", message)
 
-st.write('Luces de la sala')    
+st.write('Luces de la habitacion')    
 if st.button('ON', key="3"):
     act1="ONH"
     client1= paho.Client("casainteligentestreamlit")                           
