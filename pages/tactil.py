@@ -56,7 +56,7 @@ if st.button('OFF'):
     ret= client1.publish("casai", message)
 
     st.write('Luces de la habitacion')
-if st.button('ONH'):
+if st.button('ON'):
     act1="ONH"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
@@ -70,7 +70,7 @@ if st.button('ONH'):
 else:
     st.write('')
 
-if st.button('OFFH'):
+if st.button('OFF'):
     act1="OFFH"
     client1= paho.Client("casainteligentestreamlit")                           
     client1.on_publish = on_publish                          
